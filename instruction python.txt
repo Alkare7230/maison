@@ -1,0 +1,518 @@
+﻿#coding:utf-8
+
+print('Bonjour bande de merde de l\'ouest')
+
+( l'anti \ sert � ignorer les simple ' )
+
+//____________________________________________________________________________________
+
+systeme de commentaire
+
+# un commentaire d'une seul ligne
+"""
+Roh kjfldsklsdk
+
+"""
+//_____________________________________________________________
+
+pareil pour le langage C
+
+le "\n" sert � mettre � la ligne
+
+//_____________________________________________________________
+"""
+Roh kjfldsklsdk
+
+Nommer une variable: doit commencer par une lettre ou un underscore
+                     ne doit pas contenir de caractère spéciaux
+                     ne pas contenir d'espaces
+                     utiliser des underscore (_)
+
+Type standards : entier numérique (int)
+                 nombre floattant (float)
+                 chaîne de caractère (str)
+                 Booléen (bool)
+                 Autre (Liste, dictionnaire, tuple, ect.)
+
+Fonction         Print()      -> afficher à l'écran
+                 Type()       -> retourne le type d'une Fonction
+                 input()      -> lire au clavier/ ajouter une donner via l'inviter de commande
+
+
+//____________________________________________________________________________________________________________
+                 str.format() -> chaîne de caractère avec le quel on peut lier des fonction dans
+                 print ou autre.
+
+Opérateurs en Python : + (addition)
+                       - (soustration)
+                       * (multiplication)
+                       / (division)
+                       % (modulo) -> reste d'une division Euclidienne
+                       (Pour simplier les nombre avec des decimal vous pouvez utilisez 5.0 /2.0 (au lieux du float pour retourner le resultat))
+
+
+Variable = Variable + x
+Variable += x
+
+Variable -= x
+Variable = Variable - x
+
+Variable *= X
+Variable = varible * x
+
+
+Opérateur de comparaison : == (égale à)
+                           != (Diférent de)
+                           < (plus petit que)
+                           > (plus grand que)
+                           <= (plus petit ou égale à)
+                           >= (plus grand ou égale à)
+
+
+Condition multiple :       and (ET)
+                           or(OU)
+                           in / not in (DANS / PAS DANS)
+
+mots clés : if / elif / else
+
+
+age > 0 ET age <= 100 --> 0 < age <= 100
+
+
+i = i + i
+i += 1
+
+Boucle : While / for
+Mots clés : break/ continue
+
+
+Gérer les exceptions : Try/except (+ else, finally)
+
+Importer un module : import <nom_du_module>
+                     from <nom_du_module> import <nom_fonction>
+                     from <nom_du_module> import *
+
+Gérer les exceptions : Try/except (+ else, finally)
+
+Type exception : ValuesError
+                 ZeroDivisionError
+                 OSError
+                 AssertionError
+
+
+
+"""
+
+
+//__________________________________________________________________________
+age_personne = 45
+prix_ht = 120.46
+age_personne2 = "25"
+continuer_partie = True
+continuer_partie = False
+//__________________________________________________________________________
+
+print("l'age de la personne est {} et le prix HT est de {}e "
+.format(age_personne, prix_ht))
+
+//__________________________________________________________________________
+
+la fonction pour demander ou ajouter via l'invité de commande
+nom_joueur = input("choissisez un nom de joueur : ")
+print("Bienvenue", nom_joueur)
+
+
+prix_ht = input("entrer un prix ht : ")
+prix_ht = int(prix_ht)
+prix_ttc = prix_ht + (prix_ht * 20 / 100)
+
+print("prix ttc = ", prix_ttc)
+
+
+val_bool = True
+val_bool = int(val_bool)
+print(val_bool)
+
+str = texte
+int = nombre
+
+//___________________________________________________________________________________
+
+identifiant = "Alkare"
+mot_de_passe = "123"
+
+print("interface de connexion")
+
+user_id = input("entrez votre identifiant : ")
+user_password = input("entrez votre mot de passe : ")
+
+if user_id == identifiant or user_password == mot_de_passe:
+    print("vous etes chez vous !!", user_id)
+
+print("je ne suis plus la !! 'if' ")
+
+
+
+if + TAB + print = Valide
+
+
+lettre_hasard = "b"
+
+if lettre_hasard in "aeiouy":
+    print("c'est une consonne")
+
+ou 
+
+
+lettre_hasard = "a"
+
+if lettre_hasard in "aeiouy":
+    print("c'est une voyelle")
+
+if lettre_hasard not in "aeiouy":
+    print("c'est une consonne")
+
+ou 
+
+
+lettre_hasard = "f"
+
+if lettre_hasard in "aeiouy":
+    print("c'est une voyelle")
+else:
+    print("c'est un gétapan")
+
+
+ou 
+
+
+age = 55
+
+if age == 18:
+    print("tu es puceau !!")
+
+elif age == 50:
+    print("te vieux putain !!")
+
+elif age == 60:
+    print("te encore en vie ?")
+
+else:
+    print("tu as", age, "ans")
+
+ou 
+
+jeu_charge = True #True = 1(vrai)
+
+if jeu_charge:
+    print("le jeu fonctionne")
+
+else:
+    print("le jeu à été quitté")
+
+ou jeu_charge = False #True = 1(vrai)
+
+if not jeu_charge:
+    print("le jeu ne fonctionne pas")
+
+else:
+    print("le jeu à été lancé")
+
+ou 
+
+age = input("quel age à tu ? ")
+age = int(age)
+
+if age > 0 and age < 100:
+    print("l'age est validé")
+else:
+    print("l'age est incorrect")
+
+ou 
+
+
+age = input("quel age à tu ? ")
+age = int(age)
+
+
+if 0 < age <= 100:
+    print("l'age est validé")
+else:
+    print("l'age est incorrect")
+
+//_____________________________________________________________________________________________________________________________________________
+
+compteur = 0
+
+
+while compteur < 10:
+    print("Ahhh")
+    compteur += 1
+
+print("si je suis sortir de la boucle")
+
+ou 
+
+continuer_partie = True
+
+while continuer_partie:
+    choix_menu = input("> ")
+
+    if choix_menu == "again":
+        continue
+
+    elif choix_menu == "quitter":
+        continuer_partie = False
+
+    elif choix_menu == "Hello":
+        print("Bonjours")
+
+    else:
+        print("Sinon tu baise")
+
+
+print("A bientôt")
+
+//_______________________________________________________________________________________________________________________________
+
+ttc = lambda prixHT:prixHT + (prixHT * 20 / 100)
+print(ttc(24))
+
+calculer = lambda a, b : a + b
+
+print(calculer(14, 27))
+
+
+ou 
+
+
+import math 
+
+resultat = math.sqrt(100)
+
+print(resultat)
+sinus = math.sin(42)
+print(sinus)
+
+
+from module import au_revoir
+from module import parler
+
+au_revoir()
+parler("Alkare", "Clic bande de SALOPE !!")
+
+
+import module
+module.au_revoir()
+module.parler("Alkare", "Clic bande de SALOPE !!")
+
+
+import cloud.module
+cloud.module.au_revoir()
+cloud.module.parler("Alkare", "Clic bande de SALOPE !!")
+
+
+def parler(personnage, message):
+    print("{} : {}".format(personnage, message))
+
+def au_revoir():
+    print("Au revoir")
+import cloud.module as module
+module.au_revoir()
+module.parler("Alkare", "Clic bande de SALOPE !!")
+
+
+//-------------------------------------------------------------------------------------------
+
+
+age_user = input("Quel à tu ?")
+try:
+    age_user = int(age_user)
+except:
+    print("L'age indiquer est incorrect !!")
+
+print("tu as ", age_user, "ans")
+
+
+age_user = input("Quel à tu ?")
+try:
+    age_user = int(age_user)
+except:
+    print("L'age indiquer est incorrect !!")
+else:
+    print("tu as ", age_user, "ans")
+finally:
+    print("Fin du programme")
+
+
+
+nombre1 = 150
+nombre2 = input("Choisir nombre !!")
+try:
+    nombre2 = int(nombre2)
+    print("resultat ={}".format(nombre1 / nombre2))
+except ZeroDivisionError:
+    print("vous ne pouvez pas divser sur zero !!")
+except ValueError:
+    print("Cela sert à rien de mettre ton nom dans la commande !!")
+
+
+ou 
+
+
+nombre1 = 150
+nombre2 = input("Choisir nombre !!")
+try:
+    nombre2 = int(nombre2)
+    print("resultat ={}".format(nombre1 / nombre2))
+except ZeroDivisionError:
+    print("vous ne pouvez pas divser sur zero !!")
+except ValueError:
+    print("Cela sert à rien de mettre ton nom dans la commande !!")
+except:
+    print("Te vraiment mauvais putain !! #Ragequit")
+else:
+    print("Ah bah putain ta était longs fils de pute !!")
+finally:
+    print("Bon aller cassse toi maintenant !!!")
+
+ou 
+
+
+try:
+    age = input("Quel age as tu ?")
+    age = int(age)
+    if age < 25:
+        raise ZeroDivisionError("C'est le bordel la de dans !!")
+
+except ZeroDivisionError:
+    print("J'ai attrapé ta femme !!")
+
+
+
+ou 
+
+
+try:
+    age = input("quel âge !!")
+    age = int(age)
+
+    assert age > 25
+except AssertionError:
+    print("Je suis Moche !!")
+
+
+
+//----------------------------------------------------------------------------------------------
+
+
+SQL 
+
+NOT NULL : (colonne obligatoire)
+DEFAULT (valeur par défault)
+CHECK (Verification d'une valeur)
+UNIQUE (valeur de champ unique)
+PRIMARY KEY (clé primaire)
+AUTO_INCREMENT(incrementation de 1 en 1)
+
+//_________________________________________________________________________________________________________
+
+
+humains_crees = 0
+
+class Humain:
+    def __init__(self, c_prenom, c_age):
+        print("Creation de Regis !!")
+        self.prenom = c_prenom
+        self.age = c_age
+        Humain.humains_crees += 1
+
+
+
+
+print("Tu peu pas test !!")
+
+h1 = Humain("Alkare", 24)
+print("Humains existant : {}".format(Humain.humains_crees))
+
+h2 = Humain("Benard", 44)
+print("Humains existant : {}".format(Humain.humains_crees))
+
+
+
+//___________________________________________________________________________________________________________________
+
+class Humain:
+        
+        lieu_habitation = "Terre"
+        
+        def __init__(self, nom, age):
+                self.nom = nom
+                self.age = age
+        
+        def voix(self, message):
+                print("{} a dit : {}".format(self.nom, message))
+        
+        def changer_planete(cls, nouvelle_planete):
+                Humain.lieu_habitation = nouvelle_planete
+        
+        changer_planete = classmethod(changer_planete)
+
+        def definition():
+                print("Nous somme tous stupide !!")
+
+        definition = staticmethod(definition)
+
+
+
+h1 = Humain("Alkare", 24)
+
+print("Planete Actuelle: {}".format(Humain.lieu_habitation))
+
+Humain.definition()
+
+print("Planete Actuelle: {}".format(Humain.lieu_habitation))
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+import tkinter
+
+def hello():
+    print("Salut tout le monde c'est david lafarge pokémon !!")
+
+def show_about():
+    about_windows = tkinter.Toplevel(app)
+    about_windows.title("Il à plus d'abonnée !!")
+    lb = tkinter.label(about_windows, text="Rend l'argent salope !!!")
+    lb.pack()
+
+app = tkinter.Tk()
+app.geometry("640x480")
+app.title("Creation de Menu")
+
+
+
+
+mainmenu = tkinter.Menu(app)
+first_menu = tkinter.Menu(mainmenu, tearoff=0)
+first_menu.add_command(label="Option1", command=hello)
+first_menu.add_command(label="Option2")
+first_menu.add_command(label="Option3")
+first_menu.add_separator()
+first_menu.add_command(label="Option4")
+first_menu.add_command(label="Quitter", command=app.quit)
+
+second = tkinter.Menu(mainmenu, tearoff=0)
+second.add_command(label="commmand")
+second.add_command(label="A propos", command=show_about)
+
+mainmenu.add_cascade(label="Premier", menu=first_menu)
+mainmenu.add_cascade(label="Second", menu=second)
+
+
+
+app.config(menu=mainmenu)
+app.mainloop()

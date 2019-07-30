@@ -1,0 +1,5 @@
+Sujet de veille 7 : Postgresql
+
+*exemple d'utilisation G
+*la Ref de documentation autour g
+* Instruction et Demo d'installation sur Linux + windows
